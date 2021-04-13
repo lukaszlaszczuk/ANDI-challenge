@@ -48,6 +48,6 @@ def search_hyperparameters(simulation_folder):
 
 
 if __name__ == "__main__":
-    search_hyperparameters(simulation_folder="Base_corr_Andi_1D")
+    #search_hyperparameters(simulation_folder="Base_corr_Andi_1D")
     search_hyperparameters(simulation_folder="Base_corr_Andi_2D")
-    search_hyperparameters(simulation_folder="Base_corr_Andi_3D")
+    #search_hyperparameters(simulation_folder="Base_corr_Andi_3D")
