@@ -16,7 +16,7 @@ parser.add_argument('--savepath', help='Path to save model')
 
 def prepare_data(path):
     X = pd.read_csv(path)
-    X = X.drop(['index', 'file', 'diff_type'], axis=1)
+    X = X.drop(['file', 'Alpha'], axis=1)
     y, X = X['motion'], X.drop(['motion'], axis=1)
     x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=1 / 6, random_state=RANDOM_STATE)
     return x_train, x_test, y_train, y_test
