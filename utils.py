@@ -34,8 +34,8 @@ def load_model(path):
     return model
 
 def load_data(path, ratio):
-    X = pd.read_csv(path)
+    X = pd.read_csv(path, index_col=0)
     X = X.drop(['file', 'Alpha'], axis=1)
     y, X = X['motion'], X.drop(['motion'], axis=1)
-    x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=ratio, random_state=RANDOM_STATE)
+    x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=ratio, random_state=RANDOM_STATE, stratify=y)
     return x_train, x_test, y_train, y_test
